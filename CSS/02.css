@@ -1,0 +1,66 @@
+body {
+    background-color: #617f7f;
+    margin: 0;
+    padding: 0;
+    color: #192d2e;
+  }
+  #play-zone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* box-shadow: 3px 3px 5px #aaa */
+  }
+  .songName {
+    text-align: center;
+  }
+  i:hover {
+    color: #c97f04;
+  }
+
+  #playlist-zone {
+    font-family: Permanent Marker;
+    background-color: transparent;
+    border: none;
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card-body-playlist {
+    padding: 0;
+  }
+
+  #playlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .song {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 40px;
+    /* border: solid 1px black; */
+    margin-top: 10px;
+    padding-left: 10px;
+  }
+
+  .song:hover {
+    background-color: #efd9a7;
+    cursor: pointer;
+  }
+
+  .progress {
+    height: 8px;
+  }
+
+  .time--current,
+  .time--total {
+    font-size: 15px;
+  }
+
+  /* .progress-bar {
+    width: 20px;
+  } */
+  

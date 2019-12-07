@@ -1,0 +1,101 @@
+/* <!-- Photo by Jon Tyson on Unsplash --> */
+
+body{
+    background-color: #ccc;
+}
+
+.wrap{
+    width: 350px;
+    height: 550px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ccc;
+    margin: auto;
+    background-image: url(https://images.unsplash.com/photo-1543535170-75ef1a497627?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80);
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.8;
+    box-shadow:2px 8px 5px gray;
+    margin-top: 5%;
+    animation-duration:2s;
+}
+
+
+input{
+    border: 0;
+	outline: none;
+	box-shadow: none;
+	display: block;
+	height: 40px;
+	line-height: 30px;
+	padding: 8px 15px;
+	border-bottom: 1px solid #eee;
+	width: 75%;
+	font-size: 12px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: #aaa;
+}
+
+.card_title{
+    display: block;
+    margin-top: 30%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(53, 52, 52);
+}
+
+
+button{
+    background-color: rgba(0,0,0,0.4);
+	color: rgba(256,256,256,0.7);
+	border:0;
+	border-radius: 15px;
+    display: block;
+    margin: 15px auto 0px auto;
+	padding: 8px 45px;
+	width: 70%;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: pointer;
+	opacity: 1;
+}
+
+button:hover{
+    color: rgba(0,0,0,0.8);
+}
+
+.d-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+#warn_text{
+    display: none;
+    color: #AA1F23;
+    margin-left: 35%;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.shakein{
+    animation-name: shakein;
+    animation-duration:0.6s;
+}
+
+@keyframes shakein {
+  from,to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}

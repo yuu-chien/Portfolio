@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
+    <link rel="stylesheet" href="CSS/01.css">
+</head>
+<body>
+    <div class="wrap animated flipInY" id="wrap">
+    <div class="card_title">Sign In</div>
+                <div>
+                    <input type="text" id="email" name="email" placeholder="EMAIL">
+                    <input type="password" id="password" name="password" placeholder="PASSWORD">
+                    <div class="d-flex">
+                        <small id="warn_text">Please check again</small>
+                    </div>
+                </div>
+                <button type="submit" id='submit_btn'>Log in</button>
+            </form>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+    <script>
+        
+        $("#submit_btn").click(function(){
+            $("#wrap").removeClass("flipInY").addClass("shakein")
+            $("#warn_text").show()
+        })
+    
+    </script>
+</body>
+</html>
