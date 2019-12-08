@@ -1,6 +1,6 @@
 # Portfolio
 ### *WELCOME  !  :-)*
-> YOU CAN SEE HOW IT WORKS ON [CODEPEN]([https://codepen.io/YCH06](https://codepen.io/YCH06))
+> YOU CAN SEE HOW IT WORKS ON [CODEPEN](https://codepen.io/YCH06)
 
 ## GUIDE
 
