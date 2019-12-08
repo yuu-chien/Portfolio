@@ -4,7 +4,7 @@
 
 ## GUIDE
 
-- **01. Sign-in-Log-in**
+- **01. Sign in**
 	> <img src="https://images.plurk.com/ukyQAty8sct4k8wVivrF5.png" width="500">
 	
 - **02. Music Player**
