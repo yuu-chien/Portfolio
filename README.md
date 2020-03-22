@@ -26,6 +26,6 @@
 	> <img src="./show/08.png" width="500" alt="Working People Fluid Carousel">
 	
 - **09. Scroll Effect**
-	> <img src="./show/08.png" width="500" alt="Scroll Effect">
+	> <img src="./show/09.png" width="500" alt="Scroll Effect">
 
 ## MEMO
