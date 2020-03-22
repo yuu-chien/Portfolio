@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <title>Scroll Effect</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Nothing You Could Do', cursive;
+    }
+    .first-block{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-image: url(https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: olive; */
+    }
+    .first-block span {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        color: white;
+    }
+    .second-block{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        background-color: rgba(0, 0, 0, .5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .second-block p {
+        font-size: 2rem;
+        color: white;
+    }
+    .second-block span {
+        font-size: 1rem;
+        color: white;
+    }
+</style>
+<body>
+    <section>
+        <div class="first-block">
+            <span>SCROLL</span>
+        </div>
+        <div class="second-block">
+            <p>We are an impossibility in an impossible universe.</p>
+            <span>Ray Bradbury</span>
+        </div>
+    </section>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+    let first_block_h = $('.first-block').height();
+    $('.second-block').css('top',first_block_h);
+
+</script>
+</html>
