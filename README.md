@@ -27,5 +27,11 @@
 	
 - **09. Scroll Effect**
 	> <img src="./show/09.png" width="500" alt="Scroll Effect">
+	
+- **10. Bookcase for flex practice**
+	> <img src="./show/10.png" width="500" alt="Bookcase for flex practice">
+	
+- **11. Simple Info for flex practice**
+	> <img src="./show/11.png" width="500" alt="Simple Info for flex practice">
 
 ## MEMO
