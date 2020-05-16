@@ -55,7 +55,6 @@ body {
     color: $primary;
 }
 
-
 .chosen-btn {
     height: 5%;
     border-radius: 4px;
@@ -64,4 +63,9 @@ body {
     border: none;
     box-shadow: 1px 3px 3px #aaaaaa;
     cursor: pointer;
+}
+
+.dec {
+    font-size: 12px;
+    color: lighten($primary, 0.5);
 }
