@@ -1,5 +1,5 @@
 # Portfolio
-### *WELCOME  !  :-)*
+### *HELLO THERE !  :-)*
 > YOU can see how it works on [CodePen](https://codepen.io/YCH06)
 
 ## GUIDE
@@ -33,5 +33,8 @@
 	
 - **11. Simple Info for flex practice**
 	> <img src="./show/11.png" width="500" alt="Simple Info for flex practice">
+		
+- **12. Inspiration of Tag**
+	> <img src="./show/12.png" width="500" alt="Inspiration of Tag">
 
 ## MEMO
