@@ -1,40 +1,48 @@
-# Portfolio
-### *HELLO THERE !  :-)*
-> YOU can see how it works on [CodePen](https://codepen.io/YCH06)
+# Stuff of thoughts
+YOU can see how it works on [CodePen](https://codepen.io/YCH06)
 
 ## GUIDE
 
-- **01. Sign in**
-	> <img src="./show/01.png" width="500" alt="Sign in">
-	
-- **02. Music Player**
-	> <img src="./show/02.png" width="500" alt="Music Player">
+**01. Sign in**
 
-- **03. Weather Button**
-	> <img src="./show/03.png" width="500" alt="Weather Button">
+<img src="./preview/01.png" width="500" alt="Sign in">
 	
-- **04. GOOD DAY TYPING**
-	> <img src="./show/04.png" width="500" alt="GOOD DAY TYPING">
+**02. Music Player**
+
+<img src="./preview/02.png" width="500" alt="Music Player">
+
+**03. Weather Button**
+
+<img src="./preview/03.png" width="500" alt="Weather Button">
 	
-- **05. Sound Wave Loading**
-	> <img src="./show/05.png" width="500" alt="Sound Wave Loading">
+**04. GOOD DAY TYPING**
+
+<img src="./preview/04.png" width="500" alt="GOOD DAY TYPING">
 	
-- **06. Desert Slider**
-	> <img src="./show/06.png" width="500" alt="Desert Slider">
+**05. Sound Wave Loading**
+
+<img src="./preview/05.png" width="500" alt="Sound Wave Loading">
 	
-- **08. Working People Fluid Carousel**
-	> <img src="./show/08.png" width="500" alt="Working People Fluid Carousel">
+**06. Desert Slider**
+
+<img src="./preview/06.png" width="500" alt="Desert Slider">
 	
-- **09. Scroll Effect**
-	> <img src="./show/09.png" width="500" alt="Scroll Effect">
+**08. Working People Fluid Carousel**
+
+<img src="./preview/08.png" width="500" alt="Working People Fluid Carousel">
 	
-- **10. Bookcase for flex practice**
-	> <img src="./show/10.png" width="500" alt="Bookcase for flex practice">
+**09. Scroll Effect**
+
+<img src="./preview/09.png" width="500" alt="Scroll Effect">
 	
-- **11. Simple Info for flex practice**
-	> <img src="./show/11.png" width="500" alt="Simple Info for flex practice">
+**10. Bookcase for flex practice**
+
+<img src="./preview/10.png" width="500" alt="Bookcase for flex practice">
+	
+**11. Simple Info for flex practice**
+
+<img src="./preview/11.png" width="500" alt="Simple Info for flex practice">
 		
-- **12. Inspiration of Tag**
-	> <img src="./show/12.png" width="500" alt="Inspiration of Tag">
+**12. Inspiration of Tag**
 
-## MEMO
+<img src="./preview/12.png" width="500" alt="Inspiration of Tag">

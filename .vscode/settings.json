@@ -6,7 +6,7 @@
             // 轉譯成什麼檔案
             "extensionName": ".css",
             // 轉譯後的路徑
-            "savePath": "/CSS/"
+            "savePath": "/content/css/"
         }
     ]
 }

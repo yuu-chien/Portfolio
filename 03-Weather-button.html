@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Button</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="./content/css/03-weatherbtn.css">
+</head>
+
+<body>
+    <div id="bg_wrap">
+        <div class="bg-sunny"></div>
+        <div class="bg-cloudy"></div>
+        <div id="btn_wrap">
+            <div id="btn">
+                <div class="cloudy">Sunny</div>
+                <div class="btn_circle animated"></div>
+                <div class="sunny">Cloudy</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        let state = true;
+        $(".btn_circle").click(function() {
+            if (state) {
+                $(".bg-sunny").css("opacity", 0)
+                $(".bg-cloudy").css("opacity", 1)
+                $(".btn_circle").removeClass("slideInRight").addClass("slideInLeft")
+                $(".sunny").hide();
+                $(".cloudy").show();
+                $("#btn").addClass("justifyContent")
+                state = false;
+            } else {
+                $(".bg-sunny").css("opacity", 1)
+                $(".bg-cloudy").css("opacity", 0)
+                $(".btn_circle").removeClass("slideInLeft").addClass("slideInRight")
+                $(".sunny").show();
+                $(".cloudy").hide();
+                $("#btn").removeClass("justifyContent")
+                state = true;
+            }
+        })
+
+    </script>
+</body>
+
+</html>

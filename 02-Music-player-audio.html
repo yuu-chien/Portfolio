@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>Music Player</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet" />
+
+  <!-- this CSS -->
+  <link rel="stylesheet" href="./content/css/02-player.css">
+</head>
+
+<body>
+  <div id="play-zone" class="d-flex justify-content-center">
+    <div class="card" style="width: 18rem;">
+      <img src="https://images.unsplash.com/5/unsplash-kitsune-4.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="..." />
+      <div class="card-body musicControl">
+        <div>
+          <p class="songName"></p>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar"></div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="time--current">00:00</div>
+          <div class="time--total">00:00</div>
+        </div>
+        <div class="play-controls d-flex justify-content-between mt-2">
+          <!-- <div class="add"><i class="fas fa-plus"></i></div> -->
+          <div class="volume"><i class="fas fa-volume-up"></i></div>
+          <div class="previous"><i class="fas fa-backward"></i></div>
+          <div class="play"><i class="fas fa-play"></i></div>
+          <div class="pause"><i class="fas fa-pause"></i></div>
+          <div class="next"><i class="fas fa-forward"></i></div>
+          <!-- <div class="shuffle"><i class="fas fa-random"></i></div> -->
+          <div class="option"><i class="fas fa-bars"></i></div>
+        </div>
+        <div class="card mt-3" id="playlist-zone">
+          <div class="card-body card-body-playlist" style="width: 15rem;">
+            <ul id="playlist" class="m-auto"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $("#play-zone").mouseleave(function() {
+      $(".musicControl").slideUp();
+    })
+
+    $(".card-img-top").hover(function() {
+      $(".musicControl").slideDown();
+    })
+
+    $(".option").click(function() {
+      $("#playlist-zone").toggle()
+    })
+
+    // var musics = [
+    //   { name: "十年", url: "../../musics/十年.mp3" },
+    //   { name: "K歌之王", url: "../../musics/K歌之王.mp3" },
+    //   { name: "兄妹", url: "../../musics/兄妹.mp3" },
+    //   { name: "好久不見", url: "../../musics/好久不見.mp3" },
+    //   { name: "我們都寂寞", url: ".../musics/我們都寂寞.mp3" }
+    // ];
+
+    var musics = [
+      { name: "River Meditation", url: "https://audionautix.com/Music/RiverMeditation.mp3" },
+      { name: "Acoustic Rock", url: "https://audionautix.com/Music/AcousticRock.mp3" },
+      { name: "Sk8board", url: "https://audionautix.com/Music/Sk8board.mp3" },
+      { name: "Folk Bed", url: "https://audionautix.com/Music/Folk%20Bed.mp3" },
+      { name: "Intro 5", url: "https://audionautix.com/Music/Intro5.mp3" }
+    ];
+
+    var audio = new Audio();
+    var playingFile;
+    var i = 0;
+    var progress = document.querySelector(".progress");
+
+    // 將播放歌曲顯示在清單
+    for (let i = 0; i < musics.length; i++) {
+      $("#playlist").append(
+        "<li class='song' data-cbtn='" + [i] + "'>" + musics[i].name + "</li>"
+      );
+      // console.log(i);
+    }
+
+    $("li").click(function() {
+      // console.log($(this).data('cbtn'));
+      i = $(this).data("cbtn");
+      playingFile = musics[i];
+      // console.log(playingFile);
+      $(".songName")
+        .attr("data-cbtn", i)
+        .text(musics[i].name);
+      audio.setAttribute("src", playingFile.url);
+      audio.play();
+      $(".play").hide();
+      $(".pause").show();
+    });
+
+    // 播放下一首歌
+    // 從歌名$(".songName")標籤中取'data-cbtn'，轉換成數字後加一塞入變數a
+    // 接著再把a的值加回到'data-cbtn'
+    $(".next").click(function() {
+      var playListIndex = $(".songName").attr("data-cbtn");
+      // console.log(playListIndex);
+      var a = Number(playListIndex) + 1;
+      if (a >= musics.length) {
+        a = 0;
+      }
+      // console.log(a);
+      $(".songName")
+        .attr("data-cbtn", a)
+        .text(musics[a].name);
+      audio.setAttribute("src", musics[a].url);
+      audio.play();
+    });
+
+    $(".previous").click(function() {
+      var playListIndex = $(".songName").attr("data-cbtn");
+      // console.log(playListIndex);
+      var b = Number(playListIndex) - 1;
+      if (b <= 0) {
+        b = 0;
+      }
+      // console.log(b);
+      $(".songName")
+        .attr("data-cbtn", b)
+        .text(musics[b].name);
+      audio.setAttribute("src", musics[b].url);
+      audio.play();
+    });
+
+    //暫停鍵預設為消失
+    $(".pause").hide();
+
+    //播放鍵
+    $(".play").click(function() {
+      $(".play").hide();
+      $(".pause").show();
+      audio.play();
+    });
+
+    //暫停鍵
+    $(".pause").click(function() {
+      $(".play").show();
+      $(".pause").hide();
+      audio.pause();
+    });
+
+    // 載入與顯示歌曲的播放進度
+    var progress_width = $(".progress").width()
+    // console.log(progress_width)
+    audio.addEventListener(
+      "timeupdate",
+      function() {
+        var timecurrent = audio.currentTime;
+        // console.log(timecurrent)
+        formatTime(timecurrent);
+        // console.log(formatTime(timecurrent))
+        $(".time--current").text(formatTime(timecurrent));
+
+        // 播放進度條
+        var musicProgress = progress_width * (audio.currentTime / audio.duration);
+        //console.log($(".progress-bar").width())
+        $(".progress-bar").css("width", musicProgress);
+      },
+      false
+    );
+
+    // 點擊進度條後，音樂會播放至相對應的位置
+    progress.addEventListener("click", function(event) {
+      // console.log(event.offsetX)
+      var clickPot = audio.duration * (event.offsetX / progress.offsetWidth);
+      audio.currentTime = clickPot;
+    });
+
+    // 載入與顯示歌曲的總長度
+    audio.addEventListener("loadedmetadata", function() {
+      var duration = audio.duration;
+      //console.log(audio.duration)
+      formatTime(duration);
+      $(".time--total").text(formatTime(duration));
+    });
+
+    //格式化時間 mm:ss
+    function formatTime(musicTime) {
+      var minutes = Math.floor(musicTime / 60);
+      minutes = minutes >= 10 ? minutes : "0" + minutes;
+      var seconds = Math.floor(musicTime % 60);
+      seconds = seconds >= 10 ? seconds : "0" + seconds;
+      return minutes + ":" + seconds;
+    }
+  </script>
+</body>
+
+</html>
